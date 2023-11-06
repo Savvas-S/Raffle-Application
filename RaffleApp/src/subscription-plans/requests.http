@@ -1,0 +1,29 @@
+###@Get('get_allSubscriptionPlans')
+GET http://localhost:3000/subscription-plans/get_allSubscriptionPlans
+
+###@Post('create_subscriptionPlan')
+POST http://localhost:3000/subscription-plans/create_subscriptionPlan
+Content-Type: application/json
+
+{
+    "plan_name":"Gold",
+    "price":1.99,
+    "features":"Have a free ticket entry for every raffle worth up to 500 Euro"
+}
+
+####
+POST http://localhost:3000/subscription-plans/modify_subscriptionPlan
+Content-Type: application/json
+
+{
+    "plan_name":"Gold",
+    "price":3.99,
+    "features":"Have a free ticket entry for every raffle worth up to 1000 Euro"
+}
+
+###@Get('get_SubscriptionPlan')
+GET http://localhost:3000/subscription-plans/get_SubscriptionPlan/Gold
+
+
+####
+DELETE http://localhost:3000/subscription-plans/delete_subscriptionPlan/Gold

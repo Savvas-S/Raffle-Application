@@ -1,0 +1,65 @@
+###Create user
+POST http://localhost:3000/user/register HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Savvas",
+    "surname": "Savva",
+    "username": "SavvasS3009",
+    "email": "savvasbmwm3@gmail.com",
+    "password": "admin",
+    "contact_number": "99045426",
+    "gender": "Male",
+    "date_of_birth":"1996-09-30"
+    
+  }
+
+
+###Sign in
+POST http://localhost:3000/user/signin HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "savvasbmwm3@gmail.com",
+    "password": "admin"
+}
+
+###Sign out
+POST http://localhost:3000/user/signout HTTP/1.1
+Content-Type: application/json
+
+{}
+
+###WhoAmI Auth
+GET  http://localhost:3000/user/whoami HTTP/1.1
+
+### Get user by email
+Get http://localhost:3000/user/getUserByEmail/savvasbmwm3@gmail.com HTTP/1.1
+
+
+### Get user by user_id
+Get http://localhost:3000/user/getUserById/11 HTTP/1.1
+
+
+### Delete a particular User
+DELETE http://localhost:3000/user/delete_account/savvasbmwm3@gmail.com HTTP/1.1
+
+###password reset
+POST http://localhost:3000/user/password_reset/savvasbmwm3@gmail.com
+content-type: application/json
+
+{
+  "password": "savvasbmwm3"
+}
+
+###update contact number
+POST http://localhost:3000/user/update_contactNumber/7 HTTP/1.1
+Content-Type: application/json
+
+{
+  "contact_number":99045426
+}
+
+
+###Get all Users
+GET  http://localhost:3000/user/example HTTP/1.1
